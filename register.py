@@ -15,15 +15,16 @@ print( '''
 ''')
 
 data=cgi.FieldStorage()
-type=data['type'].value
-usernme=data['username'].value
+
+type_user=data['type'].value
 password=data['password'].value
 email=data['email'].value
-fullname=data['firstname'].value
+first_name=data['firstname'].value
+last_name=data['last_name'].value
 
 filea=open('userdata.txt','a')
 
-line=type+':'+user+':'+email+':'+password+':'+first_name+':'+last_name+'\n'
+line=type_user+':'+email+':'+password+':'+first_name+':'+last_name+'\n'
 
 fila.write(line)
 filea.close()
